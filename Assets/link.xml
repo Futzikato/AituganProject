@@ -1,0 +1,16 @@
+<linker>
+  <!-- Preserve reflection-heavy assemblies so the IL2CPP / UnityLinker
+       stripping pass doesn't drop types used only via reflection.
+       Without these, the WebGL build fails at the ManagedStripped step. -->
+
+  <assembly fullname="Newtonsoft.Json" preserve="all"/>
+  <assembly fullname="System.Runtime.Serialization" preserve="all"/>
+  <assembly fullname="System.Xml" preserve="all"/>
+  <assembly fullname="System.Xml.Linq" preserve="all"/>
+  <assembly fullname="Unity.InputSystem" preserve="all"/>
+  <assembly fullname="Unity.Mathematics" preserve="all"/>
+  <assembly fullname="Unity.Burst" preserve="all"/>
+  <assembly fullname="Unity.Collections" preserve="all"/>
+  <assembly fullname="UnityEngine.UI" preserve="all"/>
+  <assembly fullname="Assembly-CSharp" preserve="all"/>
+</linker>
